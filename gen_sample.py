@@ -51,7 +51,7 @@ def drowEdge(cnt):
         print(x1, y1, x2, y)
         draw.line((x1, y1, x2, y), fill=black, width=10)
 
-    img.save("./" + "{:0=5}".format(cnt) + ".jpg", quality=95)
+    img.save("./sample/" + "{:0=5}".format(cnt) + ".jpg", quality=95)
 
 
 def CoordinateGen(r):
