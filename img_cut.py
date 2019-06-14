@@ -47,8 +47,8 @@ def cut(path, cd, img_out, img_size, img_interval, out_format):
         print("fin:" + i)
         for j in range(0, h - (h % img_size), img_interval):
             for k in range(0, w - (w % img_size), img_interval):
-                im.crop((k, j, k + img_size, j + img_size)).save(os.path.join(cd, img_out, str(n) + str(int(j / img_interval)) +  "_" + str(int(k / img_interval)) + "." + out_format), quality=95)
-                print("---out:" + os.path.join(cd, img_out, str(n) + str(int(j / img_interval)) +  "_" + str(int(k / img_interval)) + "." + out_format))
+                im.crop((k, j, k + img_size, j + img_size)).save(os.path.join(cd, img_out, str(n) + "_" + str(int(j / img_interval)) +  "_" + str(int(k / img_interval)) + "." + out_format), quality=95)
+                print("---out:" + os.path.join(cd, img_out, str(n) + "_" + str(int(j / img_interval)) + "_" + str(int(k / img_interval)) + "." + out_format))
 
 if __name__ == '__main__':
     args = get_args()
