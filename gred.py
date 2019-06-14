@@ -11,13 +11,13 @@ def main():
 
 
 def gred(cnt):
-    filename = "/Users/hamusita/Dropbox/research/under/test_arange_" + str(cnt) +".png"
+    filename = "/Users/hamusita/programs/research/research/gred/test_arange_" + str(cnt) +".png"
     img = Image.open(filename)
     draw = ImageDraw.Draw(img)
     for i in range(64,512,64):
         draw.line((i, 0, i, 640), fill=red, width=1)
         draw.line((0, i, 640, i), fill=red, width=1)
-    img.save("./sample/" + "{:0=5}".format(cnt) + ".jpg", quality=95)
+    img.save("./sample/" + "{:0=5}".format(cnt) + ".png", quality=95)
 
 if __name__ == '__main__':
     main()

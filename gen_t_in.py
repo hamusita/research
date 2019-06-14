@@ -51,7 +51,14 @@ def drowEdge(cnt):
         print(x1, y1, x2, y)
         draw.line((x1, y1, x2, y), fill=black, width=10)
 
-    img.save("./sample/" + "{:0=5}".format(cnt) + ".jpg", quality=95)
+    img.save("./teach/" + "{:0=5}".format(cnt) + "_t.jpg", quality=95)
+
+    x1, y1 = random.choice([160, 480]), random.randint(0, 640)
+    x2 = max(x1 + random.randint(40, 160) * random.choice([1, -1]), 0)
+    y2 = random.randint(max(0, y1 - random.randint(40, 160)), y1)
+
+    draw.line((x1, y1, x2, y2), fill=black, width=20)
+    img.save("./input/" + "{:0=5}".format(cnt) + "_in.jpg", quality=95)
 
 
 def CoordinateGen(r):
